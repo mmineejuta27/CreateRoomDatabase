@@ -62,6 +62,7 @@ class SleepTrackerViewModel(
         uiScope.launch {
             val newNight = SleepNight()
             insert(newNight)
+            tonight.value = getTonightFromDatabase()
         }
     }
 
